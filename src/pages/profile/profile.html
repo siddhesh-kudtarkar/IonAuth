@@ -1,0 +1,32 @@
+<ion-content padding style="background-image: url('assets/imgs/bg.jpg'); background-size: cover;" class="fontChange w3-mobile">
+
+  <ion-item *ngFor="let item of items" class="fontChange" style="background-color: transparent;">
+    <h2 class="fontChange">Welcome <b>{{item.name}}</b></h2>
+    <h3 class="fontChange">Your profile information is as follows:</h3>
+    <ion-row>
+        <b>Username:</b>
+    </ion-row>
+    <ion-row>
+        {{item.username}}
+    </ion-row>
+    <ion-row>
+       <b>Mobile Number:</b>
+    </ion-row>
+    <ion-row>
+        {{item.mobile}}
+    </ion-row>
+    <ion-row>
+        <b>Gender:</b>
+    </ion-row>
+    <ion-row>
+        {{item.gender}}
+    </ion-row>
+    <ion-row>
+        <b>Birthdate:</b>
+    </ion-row>
+    <ion-row>
+        {{item.bday_Day}} {{item.bday_Month}}, {{item.bday_Year}}
+    </ion-row>
+  </ion-item>
+  <button ion-button block color="dark" (click)="logOut()">LOGOUT</button>
+</ion-content>

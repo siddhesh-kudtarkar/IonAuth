@@ -1,0 +1,21 @@
+<ion-content padding style="background-image: url('assets/imgs/bg.jpg'); background-size: cover;" class="fontChange w3-mobile">
+  <img src="assets/imgs/logo.png" class="centerImage w3css" style="width: 135px; height: 135px;" alt="Logo"><br>
+
+  <div style="text-align: left;" class="w3-xlarge"><b>Log In</b></div>
+
+  <div style="text-align: left;" class="w3-large">Enter your details to sign-in</div><br>
+  
+      <ion-input type="text" class="textInputConfig phColor w3-medium w3-border w3-border-black roundBorder" placeholder="Username" name="username" #username></ion-input><br>
+
+      <ion-input type="text" class="textInputConfig w3-medium w3-border w3-border-black roundBorder" placeholder="Mobile Number (10-digit)" name="mobile" pattern="[789][0-9]{9}" maxlength="10" #mobile></ion-input><br>
+
+      <ion-input type="password" class="textInputConfig w3-medium w3-border w3-border-black roundBorder" placeholder="Password" name="password" #password></ion-input><br>
+
+    <button style="background-color: black; color: white;" ion-button block (click)="signIn()"><b>LOGIN</b></button>
+
+    <div class="w3-medium" style="color: black;">Don't have an account? <b (click)="signUp()">Sign Up</b> here.</div>
+
+    <p (click)="devInfo()" class="w3-medium" style="color: black;">Short info about this app</p>
+
+    <div style="padding: 50px;"></div>
+</ion-content>

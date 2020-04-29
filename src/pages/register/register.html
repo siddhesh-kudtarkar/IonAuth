@@ -1,0 +1,75 @@
+<ion-content padding class="fontChange" style="background-image: url('assets/imgs/bg.jpg'); background-size: cover;">
+
+  <img src="assets/imgs/logo.png" class="centerImage w3css" style="width: 135px; height: 135px;" alt="Logo"><br>
+
+  <div style="text-align: left;" class="w3-xlarge"><b>Sign Up</b></div>
+
+  <div style="text-align: left;" class="w3-large">Enter your details to sign-up</div><br>
+
+  <ion-input class="textInputConfig w3-medium w3-border w3-border-black roundBorder" type="text"
+    placeholder="Name" name="name" #name></ion-input><br>
+
+  <ion-input class="textInputConfig w3-medium w3-border w3-border-black roundBorder" type="text" placeholder="Username" name="username" #username></ion-input><br>
+
+  <ion-input class="textInputConfig w3-medium w3-border w3-border-black roundBorder" type="text"
+    placeholder="Mobile Number (10-digit)" name="mobile" #mobile pattern="[789][0-9]{9}" maxlength="10"></ion-input><br>
+
+  <ion-input class="textInputConfig w3-medium w3-border w3-border-black roundBorder" type="password"
+    placeholder="Password" name="password" #password></ion-input><br>
+
+  <ion-grid>
+    <ion-list radio-group [(ngModel)]="gender">
+      <ion-row>
+        <ion-col col-3>
+          <ion-label class="w3-small" style="display: inline;"><b>Gender:</b></ion-label>
+        </ion-col>
+        <ion-col col-3>
+          <ion-radio class="w3-radio w3-border-black" color="dark" value="Male" #male></ion-radio>
+          <div class="w3-small w3-label" style="display: inline;">Male</div>
+        </ion-col>
+        <ion-col col-3>
+          <ion-radio class="w3-radio w3-border-black" color="dark" value="Female" #female></ion-radio>
+          <div class="w3-small w3-label" style="display: inline;">Female</div>
+        </ion-col>
+        <ion-col col-3>
+          <ion-radio class="w3-radio w3-border-black" color="dark" value="Other" #other></ion-radio>
+          <div class="w3-small w3-label" style="display: inline;">Other</div>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </ion-grid>
+
+  <div style="font-size: 14px;"><b>Birthday:</b></div>
+  <ion-grid style="font-size: 14px; display: inline;">
+    <ion-row>
+      <ion-col col-4>
+        <ion-select style="background-color: transparent; color: black" class="w3-select w3-border-black" [(ngModel)]="bday_Day">
+          <ion-option *ngFor="let date of bday_DayArray" value="{{date.value}}">
+            {{ date.value }}
+          </ion-option>
+        </ion-select>
+      </ion-col>
+      <ion-col col-4>
+        <ion-select style="background-color: transparent;" class="w3-select w3-border-black" [(ngModel)]="bday_Month">
+          <ion-option *ngFor="let month of bday_MonthArray" value="{{month.value}}">
+            {{ month.value }}
+          </ion-option>
+        </ion-select>
+      </ion-col>
+      <ion-col col-4>
+        <ion-select style="background-color: transparent;" class="w3-select w3-border-black" [(ngModel)]="bday_Year">
+          <ion-option *ngFor="let year of bday_YearArray" value="{{year.value}}">
+            {{ year.value }}
+          </ion-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="w3-medium" style="color: black;">By clicking <b>Sign Up</b>, you hereby agree to our Terms & Data Policy.</div>
+
+  <div padding>
+    <button style="background-color: black; color: white;" ion-button block (click)="register()"><b>SIGN UP</b></button>
+  </div>
+
+</ion-content>

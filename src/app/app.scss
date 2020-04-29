@@ -1,0 +1,25 @@
+.fontChange {
+    @import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
+    font-family: 'Solway', serif;
+}
+
+.centerImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.roundBorder {
+    border-radius: 45px;
+}
+
+.textInputConfig {
+    background-color: transparent;
+    padding-left: 15px;
+}
+
+ion-input{
+    input::placeholder {
+      color: black!important;
+    }
+  }
