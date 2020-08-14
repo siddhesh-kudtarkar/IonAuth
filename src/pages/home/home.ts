@@ -67,7 +67,7 @@ export class HomePage {
 
       loader.present().then(() => {
 
-        this.http.post('http://sidsk99.heliohost.org/login.php', data, options)
+        this.http.post('http://your.server-url.com/login.php', data, options)
           .map(res => res.json())
           .subscribe(res => {
             console.log(res)

@@ -93,7 +93,7 @@ export class RegisterPage {
       });
 
       loader.present().then(() => {
-        this.http.post('http://sidsk99.heliohost.org/register.php', data, options)
+        this.http.post('http://your.server-url.com/register.php', data, options)
           .map(res => res.json())
           .subscribe(res => {
 
